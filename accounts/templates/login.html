@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/accounts/login.css">
+    <title>LOGIN -  GestaoTI</title>
+</head>
+<body>
+    <div class="title">
+        <h1>--GestaoTI--</h1>
+    </div>
+    <div class="box-left">
+    </div>
+    <div class="box-center">
+        <div class="conteudo">
+
+            <form method="post">
+                {% csrf_token %}
+                <label>Usuário:</label><br>
+                {{ login_form.username }}<br>
+                <label>Senha:</label><br>
+                {{ login_form.password }} <br>
+                {% if messages %}
+                    {% for m in messages %}
+                        <div class="alert_error" role="alert">
+                            {{ m }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <input type="submit" value="Acessar"><br>
+                <a id='esqueci_senha' href="{% url 'recuperacao_senha' %}">Esqueci minha senha</a>
+            </form>
+        </div>
+    </div>
+    <div class="box-right">
+        <h3></h3>
+    </div>
+    
+</body>
+</html>

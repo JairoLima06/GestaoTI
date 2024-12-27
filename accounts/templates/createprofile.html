@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/aplication/css/createuser.css">
+
+{% endblock %}
+
+
+{% block content %}
+<table>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_table}}
+        <input type="submit" value="Cadastrar">
+    </form>
+</table>    
+
+{% endblock %}

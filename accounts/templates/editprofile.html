@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/accounts/profile.css">
+{% endblock %}
+
+{% block content %}
+    <div class="info-form">
+        <section class="content">        
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <section class="grid grid-auto-rows-2">
+                    <div class="photo">
+                    {% if user.photo %}
+                        <img class='open' id="foto" src="/media/{{user.photo}}" alt="" srcset="">
+                        {% else %}
+                        <img class='open' id="foto"src="/media/image/padrao.png">
+                        {% endif %}
+                    </div>
+
+                    <dialog class="modal">
+                        <h2>Alteração de foto</h2>
+                        {{form.photo}}
+                        <button class='enviar_foto' type="submit">Enviar foto</button>
+                        <button type="button" class="btn close">X</button>
+                    </dialog>
+
+                    
+                        
+                        
+                    <div class="item item-grande">
+                        <label id="form">Username:</label><br>
+                        {{form.username}}<br>
+                    </div>
+                        
+                    <div class="item">
+                        <label id="form">Primeiro nome:</label><br>
+                        {{form.first_name}}<br>
+                    </div>
+
+                    <div class="item">
+                        <label id="form">Último nome:</label><br>
+                        {{form.last_name}}<br>
+                    </div>
+
+                    <div class="item">
+                        <label id="form">Data de nasc:</label><br>
+                        {{form.birthday}}<br>
+                    </div>
+
+                    <div class="item">
+                        <label id="form">Telefone:</label><br>
+                        {{form.telephone}}<br>
+                    </div>
+                    
+                    <div class="item item-grande">
+                        <label id="form">E-mail:</label><br>
+                        {{form.email}}<br>
+                    </div>
+                    
+                    <div class="item item-grande">
+                        <label id="form">Unidade:</label><br>
+                        {{form.unit}}<br>
+                    </div>
+                    
+                    <div class="item item-grande">
+                        <label id="form">Ramal:</label><br>
+                        {{form.ramal}}<br>
+                    </div>
+
+                    {% if user.cargo.position_name == 'Gestor T.I' %}
+                        <div class="item item-grande">
+                            <label id="form">Path_:</label><br>
+                            {{form.path}}<br>
+                        </div>
+                    
+                        <div class="item item-grande">
+                            <label id="form">Saldo de folgas:</label><br>
+                            {{form.saldo}}
+                        </div>
+                                        
+                    {% endif %}
+
+                  
+
+                    <button id="salvar" type="submit">Salvar alteração</button>
+                    
+                </section>
+            </form>
+        </section>
+    </div>
+    <script>
+        const modal = document.querySelector(".modal");
+        const openModalBtn = document.querySelector(".open");
+        const closeModalBtn = document.querySelector(".close");
+        
+        openModalBtn.addEventListener("click", () => modal.showModal());
+        
+        closeModalBtn.addEventListener("click", () => modal.close());
+    </script>
+
+{% endblock %}
