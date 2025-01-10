@@ -1,0 +1,108 @@
+body{
+    background-image: url(/media/image/background1.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr ;
+    grid-template-rows: 20% 72%  ;
+    grid-template-areas:
+      "title title title"
+      "box-left box-center box-right ";
+    min-width: 700px;
+    min-height: 600px;
+
+}
+
+
+
+.title {
+    margin-top: 8%;
+    grid-area: title;
+    color: aliceblue;
+    font-size: 20pt;
+    font-family: 'Helvetica';
+}
+  
+
+.box-left {
+    grid-area: box-left;
+}
+
+
+.box-center{
+    margin-top: 30%;
+    grid-area: box-center;
+    background-color: rgba(126, 152, 152, 0.833);
+    opacity: 0.8;
+    border-radius: 2%;
+}
+
+  
+.box-right {
+    grid-area: box-right;
+}
+  
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10% 0% 10% 0% ;
+    /* background-color: blue; */
+}
+
+.alert_error{
+    background: red;
+    font-size: larger;
+    color: white;
+    font-weight: bold;
+}
+
+input{
+    opacity: 2.0;
+    width: 60%;
+    height: 20%;
+    border-radius: 3%;
+    border: none;
+    margin: 2% 0% 5% 0%;
+    padding-left: 6px;
+    
+    
+}
+
+
+
+label{
+    margin-bottom: 1%;
+    font-size: 120%;
+    font-weight: bold;
+    font-family: 'Georgia';
+    color: black;
+}
+
+input[type="submit"]{
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    background-color: rgb(3, 92, 21);
+    
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: 450ms;
+    border-radius: 10px;
+}
+
+a#esqueci_senha{
+    color:  white;
+    text-decoration:none;
+
+}
+
+a#esqueci_senha:hover{
+    color:  #150ff0;
+    text-decoration: underline;
+
+}
