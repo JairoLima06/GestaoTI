@@ -101,3 +101,10 @@ input:checked ~ .informacoes {
 button#ano{
     margin-top: 15px;
 }
+
+/* CELULAR */ 
+@media (max-width: 480px) {
+    form {
+        display: block;
+    }
+}

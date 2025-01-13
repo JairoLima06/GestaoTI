@@ -133,10 +133,18 @@ span {
  
 
     tbody {
-
+        width: 74vw;
+        height: 72vw;
+        display: block;
+        padding: 0;
+        margin: auto;
     }
 
     input#id_user {
         width: 50vw;
+    }
+
+    .create_user {
+        margin-top: 1rem;
     }
 }

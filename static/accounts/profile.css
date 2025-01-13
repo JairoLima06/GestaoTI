@@ -8,10 +8,11 @@
     
 }
 /*AREA DA NAVBAR LATERAL*/
-/*PROFILE*/
-
-
-
+.options-navbar#profile{
+    background-color: #575a5d;
+    color: white;
+    font-size: bold;
+}
 
 .content{
     padding-bottom: 5%;
