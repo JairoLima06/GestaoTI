@@ -99,10 +99,11 @@ span {
 @media (max-width: 768px) {
     tbody {
         width: 68vw;
+        display: block;
     }
 
     input#id_user {
-        width: 55vh;
+        width: 92%;
         position: relative;
     }
 
@@ -120,8 +121,8 @@ span {
     /*BOTAO CADASTRAR*/
 
     [value="Cadastrar"] {
-        margin-top: 63vw;
-        margin-left: 29vw;
+     border-radius: 20px;
+     margin-top: 29rem;
     }
 }
 
@@ -146,5 +147,106 @@ span {
 
     .create_user {
         margin-top: 1rem;
+    }
+}
+
+@media (max-width: 980px) {
+    tbody {
+        width: 47rem;
+        margin-left: -1rem;
+    }
+
+    input#id_user {
+        width: 43rem;
+    }
+
+    [value="Cadastrar"] {
+        margin-top: 32rem;
+        margin-left: 20rem;
+        border-radius: 20px;
+    }
+}
+
+/*BOTAO CADASTRAR */
+
+@media (max-width: 1550px) {
+    
+
+    [value="Cadastrar"] {
+        border-radius: 20px;
+        margin-top: 28rem;
+    }
+}
+
+@media (max-width: 1640px) {
+    [value="Cadastrar"] {
+        margin-top: 30rem;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 1023px){
+    tbody {
+        width: 47rem;
+        margin-left: -1rem;
+    }
+
+    input#id_user{
+        width: 44rem;
+    }
+}
+
+@media (max-width: 865px) {
+    tbody {
+        width: 43rem;
+
+    }
+
+    input#id_user {
+        width: 39rem;
+    }
+}
+
+@media (max-width: 785px) {
+    tbody {
+        width: 35rem;
+    }
+
+    input#id_user {
+        width: 32rem;
+    }
+}
+
+@media (max-width: 680px) {
+    tbody{
+        width: 30rem;
+    }
+
+    input#id_username {
+        width: 10rem;
+    }
+
+    span {
+        width: 10rem;
+    }
+
+    input#id_user {
+        width: 15rem;
+    }
+
+}
+
+@media (max-width: 750px) {
+    tbody {
+        width: 35rem;
+    }
+
+    input#id_user {
+        width: 20rem;
+    }
+
+    [value="Cadastrar"] {
+        margin-right: 20rem;
+        left: 3rem;
     }
 }
